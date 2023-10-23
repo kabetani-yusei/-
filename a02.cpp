@@ -36,9 +36,20 @@ template<class T, class U>
 bool chmax(T &a, const U &b){ return a < b ? (a = b, 1) : 0; }
 template<class T, class U>
 bool chmin(T &a, const U &b){ return a > b ? (a = b, 1) : 0; }
+
 int main(){
-    int a,b;
-    cin >> a >> b;
-    cout << a + b << endl;
+    int n,x;
+    int a[101];
+    cin >> n >> x;
+    rep(i,n) cin >> a[i];
+    bool ans = false;
+    rep(i,n){
+        if(a[i] == x) ans = true;
+    }
+    if(ans){
+        cout << "Yes" << endl;
+    }else{
+        cout << "No" << endl;
+    }
     return 0;
 }
